@@ -1,0 +1,43 @@
+<p>list-form works!</p>
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div *ngIf = "lists.id ==0">  <h2>Add OrderDetails</h2></div>
+            <div *ngIf = "lists.id >0">  <h2>Update OrderDetails</h2></div>
+            <hr>
+
+            
+            <form #spForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">Name</label>
+                    <input type="text" name="name" [(ngModel)]="lists.name"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">PhoneNo</label>
+                    <input type="text" name="phoneno" [(ngModel)]="lists.phoneno" />
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">BookTitle</label>
+                    <input type="text" name="booktitle" [(ngModel)]="lists.booktitle" />
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">code</label>
+                    <input type="text" name="code" [(ngModel)]="lists.code"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">Payment</label>
+                    <input type="text" name="payment" [(ngModel)]="lists.payment"/>
+                </div><br>
+                <div class="form-group-row">
+                    <label class="col-sm-2 col-form-label">Money</label>
+                    <input type="text" name="money" [(ngModel)]="lists.money"/>
+                </div><br>
+                
+                <div class="form-group-row">
+                    <div class="col-sm-2"><button class="btn btn-info" type="submit">submit</button></div>
+                </div>
+
+            </form>
+            </div>
+            </div>
+            </div>

@@ -1,0 +1,61 @@
+<p>list-list works!</p>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>  
+  <body>
+
+          <div class="main-content">
+              <div class="section-content section-content-p30">
+                  <div class="container-fluid">
+                     <td><button type="button" class="btn btn-md btn-info" (click) = "addlist()">Add OrderDetails</button></td>
+            
+                      <div class="row">
+                     <!----   <a routerLink="/listform">Add New OrderDetails</a>---->
+                        <table class='table table-bordered'>
+                          <thead>
+                              <tr class='table-dark'>
+                                  <th>ID</th>
+                                  <th>Name</th>
+                                  <th>BookTitle</th>
+                                  <th>code</th>
+                                  <th>Action</th>
+                              </tr>
+                      
+                          </thead>
+                          <tr >
+                              <td>101</td>
+                              <td>vishnu</td>
+                              <td>ramayan</td>
+                              <td>127</td>
+                              
+                          </tr>
+                          <tr *ngFor="let tempList of orderdetails">
+                              <td>{{tempList.id}}</td>
+                              <td>{{tempList.name}}</td>
+                              <td>{{tempList.booktitle}}</td>
+                              <td>{{tempList.code}}</td>
+                              
+              <td>            
+<button type="button" class="btn btn-md btn-info" (click) = "updatelist(tempList.id)">Update</button>
+            &nbsp; &nbsp;
+             <button type="button" class="btn btn-md btn-danger" (click) = "deletelist(tempList.id)">Delete </button>
+                             </td>
+                            </tr>
+                      
+          
+                      </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </body>
+          </html>
+           
+          
+        
+  
+            
